@@ -1,58 +1,125 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎵 Moodify
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Mood-Based Music Discovery Platform**
 
-## About Laravel
+A futuristic, glassmorphic web application that curates music recommendations based on your current mood. Built with Laravel Blade, Alpine.js, and Tailwind CSS.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Moodify Hero](screenshots/hero.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📸 Screenshots
 
-## Learning Laravel
+### 🏠 Home Dashboard
+The main landing page with mood selection, ambient glow effects, and personalized recommendations.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![Home Dashboard](screenshots/home.png)
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🎭 Mood Selection
+Choose from 8 different moods to instantly filter songs that match your vibe.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+![Mood Selector](screenshots/mood-selector-1.png)
+![Mood Selector](screenshots/mood-selector-2.png)
 
-## Agentic Development
+### 🔍 Explore All Songs
+Browse the complete collection of 100+ songs across three languages.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+![Explore Page](screenshots/explore.png)
+
+### ❤️ My Favorites
+Your personally curated collection of saved tracks, persisted across sessions.
+
+![Favorites](screenshots/favorites.png)
+
+### 🕐 Recently Played
+Automatic tracking of your listening history.
+
+![Recently Played](screenshots/recently-played.png)
+
+### 🎬 Video Playback
+Inline YouTube embed with thumbnail preview and one-click play.
+
+![Video Player](screenshots/player.png)
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| **🎭 Mood Selection** | 8 moods: Happy, Sad, Energetic, Romantic, Focus, Party, Workout, Relaxed |
+| **🌍 Multi-Language** | 100+ songs in **English**, **Hindi**, and **Spanish** |
+| **❤️ Favorites** | Save songs with heart icon — persisted in `localStorage` |
+| **🕐 Recently Played** | Auto-tracks listening history (last 50 songs) |
+| **🔍 Smart Search** | Real-time search across titles, artists, genres, and tags |
+| **🎛️ Advanced Filtering** | Genre, year, language, vocal type, and energy level sliders |
+| **⚡ Quick Filters** | One-click: For You, New Releases, Top Rated, Trending |
+| **📱 Responsive** | Mobile-first with collapsible sidebar |
+| **🎨 Glassmorphic UI** | Dark theme with ambient glows, blur effects, and gradients |
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **Laravel** | Backend framework (Blade templating) |
+| **Alpine.js** | Lightweight reactive JavaScript framework |
+| **Tailwind CSS** | Utility-first CSS framework |
+| **YouTube Embed API** | Video playback integration |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- PHP &gt;= 8.1
+- Composer
+- Node.js & NPM
+
+### Installation
 
 ```bash
-composer require laravel/boost --dev
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/moodify.git
+cd moodify
 
-php artisan boost:install
+# Install PHP dependencies
+composer install
+
+# Install JavaScript dependencies
+npm install
+
+# Copy environment file
+cp .env.example .env
+
+# Generate application key
+php artisan key:generate
+
+# Start the development server
+php artisan serve
 ```
+## 🎶 Song Catalog
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+| Language     | Count | Genres                                                  |
+| ------------ | ----- | ------------------------------------------------------- |
+| 🇬🇧 English | 34    | Pop, Rock, Electronic, Hip Hop, R\&B, Alternative, Soul |
+| 🇮🇳 Hindi   | 33    | Bollywood, Telugu, Folk, Pop                            |
+| 🇪🇸 Spanish | 33    | Latin, Reggaeton, Pop, Salsa, Tropical                  |
 
-## Contributing
+## 🔐 Data Persistence
+All user data is stored locally in the browser:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Data            | Storage Key         | Max Items |
+| --------------- | ------------------- | --------- |
+| Favorites       | `moodify_favorites` | Unlimited |
+| Recently Played | `moodify_recent`    | 50        |
 
-## Code of Conduct
+## 🙏 Acknowledgments
+[Laravel](https://laravel.com/) — The PHP framework for web artisans
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+[Alpine.js](https://alpinejs.dev/) — Rugged, minimal framework for composing JavaScript behavior
 
-## Security Vulnerabilities
+[Tailwind CSS](https://tailwindcss.com/) — Rapidly build modern websites without leaving your HTML
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[YouTube](https://youtube.com/) — Video hosting and embed API
