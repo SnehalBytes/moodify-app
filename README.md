@@ -7,9 +7,6 @@ A futuristic, glassmorphic web application that curates music recommendations ba
 ![Moodify Hero](screenshots/hero.png)
 
 ---
-### 🚀 Live Demo
-[Click here to visit Moodify!](http://mood-music.test/?mood=happy#)
-
 ## 📸 Screenshots
 
 ### 🏠 Home Dashboard
